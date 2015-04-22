@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+</head>
+<body>
+	Post :<br/>
+	{% for x in postobj %}
+		{{x.text}}<br/>
+	{% endfor %}
+
+	<form  method="post">
+		{% csrf_token %}
+		<textarea name="text" cols="30" rows="10"></textarea> <br/>
+		<input type="submit" value="Post">
+	</form>
+</body>
+</html>
